@@ -1,17 +1,16 @@
-- name: Install packages 
+- name: Install packages
   ansible.builtin.apt:
-    name: 
+    name:
       - ghostscript
       - libapache2-mod-php
-      - php 
+      - php
       - php-bcmath
       - php-curl
       - php-imagick
       - php-intl
-      - php-json 
-      - php-mbstring 
-      - php-mysql 
-      - php-xml 
+      - php-json
+      - php-mbstring
+      - php-mysql
+      - php-xml
       - php-zip
-    state: present    
-       
+    state: present

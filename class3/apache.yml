@@ -1,4 +1,4 @@
-- name: Install apache 
+- name: Install apache
   ansible.builtin.apt:
     name: apache2
     state: present

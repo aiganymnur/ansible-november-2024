@@ -10,11 +10,11 @@
     state: started
     enabled: yes
 
-- name: Install MySQL-python
+- name: Install PyMySQL
   ansible.builtin.apt:
     name: python3-pymysql
     state: present
-  
+    update_cache: yes
 
 - name: Create a new database
   community.mysql.mysql_db:
@@ -22,9 +22,9 @@
     state: present
     login_unix_socket: /run/mysqld/mysqld.sock
 
-- name: Create database user with name 'aiga' and password '12345' with all database privileges
+- name: Create database user 
   community.mysql.mysql_user:
-    name: aiga
+    name: hello
     password: 12345
     priv: '*.*:ALL'
     state: present
