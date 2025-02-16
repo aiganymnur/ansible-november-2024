@@ -23,3 +23,9 @@
   ansible.builtin.file:
     path: /var/www/html/index.html
     state: absent
+
+
+- name: Copy file wp-config.php
+  ansible.builtin.template:
+    src: /home/ubuntu/ansible-november-2024/class4-1/wordpress/templates/wp-config.php.j2
+    dest: /var/www/html/wp-config.php
